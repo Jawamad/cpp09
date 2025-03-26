@@ -6,7 +6,7 @@
 /*   By: flmuller <flmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 11:47:08 by flmuller          #+#    #+#             */
-/*   Updated: 2025/03/20 14:46:47 by flmuller         ###   ########.fr       */
+/*   Updated: 2025/03/26 14:51:49 by flmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 #include <fstream>
 #include <sstream>
 #include <map>
+#include <cstdlib>
+#include <limits>
 
 class BitcoinExchange 
 {
@@ -32,9 +34,11 @@ class BitcoinExchange
 
 		std::map<int, float> const& getdatabase() const;
 
-		void	setData(std::ifstream& file);
-		void	displayBtcValue(std::ifstream& inputFile);
-		void	findclosestValue(int& date, float& value) const;
+		int		setData(std::string file);
+		void	displayBtcValue(std::string inputFile);
+		int		findclosestDate(int& date) const;
 };
+int	stringToDateInt(const std::string &dateStr);
+bool	isValidDate(const std::string &dateStr);
 
 #endif
