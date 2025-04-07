@@ -1,29 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RPN.hpp                                            :+:      :+:    :+:   */
+/*   PmergeVector.hpp                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flmuller <flmuller@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/31 15:33:09 by flmuller          #+#    #+#             */
-/*   Updated: 2025/04/03 14:53:18 by flmuller         ###   ########.fr       */
+/*   Created: 2025/04/03 15:56:11 by flmuller          #+#    #+#             */
+/*   Updated: 2025/04/03 16:03:12 by flmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RPN_HPP
-#define RPN_HPP
+
+#ifndef PMERGEVECTOR_HPP
+#define PMERGEVECTOR_HPP
 
 #include <iostream>
-#include <stack>
-#include <stdlib.h>
-#include <sstream>
+#include <vector>
 
-class RPN :public std::stack <int>
+class PmergeVector : public std::vector<int>
 {
-	private:
-		int	calc(char symb);
 	public:
-		int	addNewSym(std::string arg);
+		PmergeVector();
+		PmergeVector(PmergeVector& const obj);
+		~PmergeVector();
+		PmergeVector& operator=(PmergeVector& const obj);
+		int	MISort();
 };
 
 #endif

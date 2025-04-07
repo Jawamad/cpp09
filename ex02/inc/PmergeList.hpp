@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   RPN.hpp                                            :+:      :+:    :+:   */
+/*   PmergeList.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: flmuller <flmuller@student.42perpignan.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/31 15:33:09 by flmuller          #+#    #+#             */
-/*   Updated: 2025/04/03 14:53:18 by flmuller         ###   ########.fr       */
+/*   Created: 2025/04/03 15:53:25 by flmuller          #+#    #+#             */
+/*   Updated: 2025/04/03 15:54:46 by flmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef RPN_HPP
-#define RPN_HPP
+#ifndef PMERGELIST_HPP
+#define PMERGELIST_HPP
 
 #include <iostream>
-#include <stack>
-#include <stdlib.h>
-#include <sstream>
+#include <list>
 
-class RPN :public std::stack <int>
+class PmergeList : public std::list<int>
 {
-	private:
-		int	calc(char symb);
 	public:
-		int	addNewSym(std::string arg);
+		PmergeList();
+		PmergeList(PmergeList& const obj);
+		~PmergeList();
+		PmergeList& operator=(PmergeList& const obj);
+		int	MISort();
 };
 
 #endif
