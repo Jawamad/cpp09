@@ -6,11 +6,23 @@
 /*   By: flmuller <flmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:05:05 by flmuller          #+#    #+#             */
-/*   Updated: 2025/04/01 15:54:48 by flmuller         ###   ########.fr       */
+/*   Updated: 2025/04/02 14:28:05 by flmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/RPN.hpp"
+
+RPN::RPN(){}
+RPN::RPN(RPN const& obj)
+{
+	*this = obj;
+}
+RPN::~RPN(){}
+RPN& RPN::operator=(RPN const& obj)
+{
+	stack::operator=(obj);
+	return *this;
+}
 
 int	RPN::addNewSym(std::string arg)
 {
