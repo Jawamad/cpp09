@@ -6,7 +6,7 @@
 /*   By: flmuller <flmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:07:49 by flmuller          #+#    #+#             */
-/*   Updated: 2025/04/07 12:04:21 by flmuller         ###   ########.fr       */
+/*   Updated: 2025/05/21 14:48:39 by flmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	PmergeVector::MISort()
 	mergeInsertSort(*this, temp, 0, size());
 }
 
-void	PmergeVector::insertionSort(std::vector<int> arr, int left, int right)
+void	PmergeVector::insertionSort(std::vector<int>& arr, int left, int right)
 {
 	for (int i = left + 1; i < right; ++i)
 	{
