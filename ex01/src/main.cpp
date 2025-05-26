@@ -6,7 +6,7 @@
 /*   By: flmuller <flmuller@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/01 14:04:07 by flmuller          #+#    #+#             */
-/*   Updated: 2025/04/01 15:56:33 by flmuller         ###   ########.fr       */
+/*   Updated: 2025/05/26 14:29:48 by flmuller         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int main(int ac, char** arg)
 {
 	if (ac !=2)
 	{
-		std::cout << "Error : too many arguments" << std::endl;
+		std::cout << "Error : wrong number arguments" << std::endl;
 		return (1);
 	}
 	std::stringstream ss(arg[1]);
